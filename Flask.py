@@ -1,6 +1,6 @@
 from flask import *
 from datetime import timedelta
-
+import sqlalchemy
 
 app = Flask(__name__)
 app.secret_key = "hello"
@@ -34,6 +34,7 @@ def user():
         user = session["user"]
         return render_template("user.html", user=user)
     else:
+        flash("You are not logged In!")
         return redirect(url_for("login"))
 
 
