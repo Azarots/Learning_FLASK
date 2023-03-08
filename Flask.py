@@ -3,7 +3,7 @@ from datetime import timedelta
 import sqlalchemy
 
 app = Flask(__name__)
-app.secret_key = "hello"
+app.secret_key = "flask"
 app.permanent_session_lifetime = timedelta(days=1)
 
 
